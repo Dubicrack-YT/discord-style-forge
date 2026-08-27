@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Generador local de nombres Unicode, separadores, categorías, canales y paletas para Discord." />
+    <meta name="theme-color" content="#101115" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23101115'/%3E%3Cpath d='M18 14h15c13 0 18 7 18 18s-5 18-18 18H18z' fill='none' stroke='%235BCE96' stroke-width='6'/%3E%3Cpath d='M25 23h9c5 0 8 3 8 9s-3 9-8 9h-9z' fill='%235BCE96'/%3E%3C/svg%3E" />
+    <title>Discord Style Forge</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Discord Style Forge, inicio">
+        <span class="brand-mark" aria-hidden="true"><span>D</span></span>
+        <span><strong>STYLE</strong><small>FORGE</small></span>
+      </a>
+      <p class="topbar-note">Compositor local para Discord</p>
+      <a class="source-link" href="https://github.com/Dubicrack-YT" target="_blank" rel="noreferrer">Dubicrack-YT <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="inicio" class="app-shell">
+      <aside class="composer-rail" aria-label="Tipo de nombre a construir">
+        <div class="rail-intro">
+          <p class="eyebrow">01 / Componer</p>
+          <h1>Forja nombres que sí se sienten tuyos.</h1>
+          <p>Escribe, elige un estilo y copia. Sin bots, sin login y sin guardar datos.</p>
+        </div>
+
+        <nav class="mode-nav" aria-label="Constructores">
+          <button class="mode-button is-active" type="button" data-mode="role" aria-pressed="true">
+            <span class="mode-glyph">R</span><span><b>Roles</b><small>Nombres y colores</small></span>
+          </button>
+          <button class="mode-button" type="button" data-mode="divider" aria-pressed="false">
+            <span class="mode-glyph">S</span><span><b>Separadores</b><small>Ordena tu jerarquía</small></span>
+          </button>
+          <button class="mode-button" type="button" data-mode="category" aria-pressed="false">
+            <span class="mode-glyph">C</span><span><b>Categorías</b><small>Encabezados de canales</small></span>
+          </button>
+          <button class="mode-button" type="button" data-mode="channel" aria-pressed="false">
+            <span class="mode-glyph">#</span><span><b>Canales</b><small>Emoji + nombre listo</small></span>
+          </button>
+          <button class="mode-button" type="button" data-mode="gradient" aria-pressed="false">
+            <span class="mode-glyph">G</span><span><b>Degradados</b><small>Un color, varias paradas</small></span>
+          </button>
+        </nav>
+
+        <div class="rail-footer">
+          <span class="status-dot" aria-hidden="true"></span>
+          Todo se genera en tu navegador.
+        </div>
+      </aside>
+
+      <section class="workbench" aria-label="Generador de nombres">
+        <div class="workbench-head">
+          <div>
+            <p id="mode-kicker" class="eyebrow">Constructor de roles</p>
+            <h2 id="mode-title">Dale personalidad a tu jerarquía.</h2>
+          </div>
+          <button id="reset-button" class="text-button" type="button">Restablecer</button>
+        </div>
+
+        <div class="builder-grid">
+          <section class="editor-card" aria-labelledby="editor-title">
+            <div class="card-heading">
+              <span class="step-number">A</span>
+              <div><p id="editor-title">Texto base</p><small id="editor-help">El nombre que quieres convertir en rol.</small></div>
+            </div>
+
+            <div id="name-field">
+              <label class="field-label" for="name-input">Escribe tu idea</label>
+              <div class="input-wrap">
+                <input id="name-input" type="text" maxlength="46" value="Creador de Contenido" autocomplete="off" spellcheck="false" />
+                <span id="character-count" aria-hidden="true">21/46</span>
+              </div>
+            </div>
+
+            <div id="emoji-field" class="emoji-field is-hidden">
+              <label class="field-label" for="emoji-input">Emoji del canal</label>
+              <div class="emoji-row">
+                <input id="emoji-input" type="text" maxlength="4" value="💬" aria-label="Emoji del canal" />
+                <button id="emoji-suggest" class="suggest-button" type="button">Sugerir emoji</button>
+              </div>
+            </div>
+
+            <div id="role-type-field" class="select-field">
+              <label class="field-label" for="role-type">Tipo de rol</label>
+              <select id="role-type">
+                <option value="creator">Creador de contenido</option>
+                <option value="member">Miembro / comunidad</option>
+                <option value="verified">Verificado</option>
+                <option value="editor">Editor / recursos</option>
+                <option value="staff">Staff / administración</option>
+                <option value="personal">Personalizado / identidad</option>
+                <option value="age">Edad / acceso protegido</option>
+              </select>
+            </div>
+
+            <div id="style-section" class="style-section">
+              <div class="section-label-row"><span class="field-label">Estilo de texto</span><span id="style-count">4 opciones</span></div>
+              <div id="style-choices" class="style-choices" role="radiogroup" aria-label="Estilo del texto"></div>
+            </div>
+
+            <div id="channel-type-field" class="select-field is-hidden">
+              <label class="field-label" for="channel-type">Uso del canal</label>
+              <select id="channel-type">
+                <option value="general">Chat general</option>
+                <option value="info">Información</option>
+                <option value="rules">Reglas</option>
+                <option value="announcements">Anuncios</option>
+                <option value="verify">Verificación</option>
+                <option value="media">Multimedia</option>
+                <option value="economy">Economía</option>
+                <option value="tickets">Tickets / soporte</option>
+                <option value="applications">Postulaciones</option>
+                <option value="voice">Crear canal de voz</option>
+                <option value="staff">Staff interno</option>
+              </select>
+            </div>
+
+            <div id="gradient-field" class="gradient-field is-hidden">
+              <div class="gradient-field-head"><span class="field-label">Color base</span><span>Todo se deriva de este color</span></div>
+              <div class="base-color-row">
+                <input id="gradient-base" type="color" value="#C77DFF" aria-label="Color base del degradado" />
+                <code id="gradient-base-code">#C77DFF</code>
+                <button id="gradient-random" class="suggest-button" type="button">Nuevo color</button>
+              </div>
+
+              <div class="select-field gradient-select-field">
+                <label class="field-label" for="gradient-style">Acabado</label>
+                <select id="gradient-style">
+                  <option value="soft">Suave</option>
+                  <option value="metal">Metálico</option>
+                  <option value="chrome">Cromado</option>
+                  <option value="gold">Oro / mineral</option>
+                  <option value="aurora">Aurora</option>
+                  <option value="matte">Mate</option>
+                </select>
+              </div>
+
+              <div class="select-field gradient-select-field">
+                <label class="field-label" for="gradient-direction">Dirección</label>
+                <select id="gradient-direction">
+                  <option value="135deg">Diagonal</option>
+                  <option value="90deg">Vertical</option>
+                  <option value="0deg">Horizontal</option>
+                  <option value="45deg">Diagonal inversa</option>
+                </select>
+              </div>
+
+              <div class="stops-control">
+                <div><span class="field-label">Paradas de color</span><small id="gradient-stops-help">Por defecto: 2 colores derivados.</small></div>
+                <div class="stop-stepper" aria-label="Cantidad de paradas del degradado">
+                  <button id="remove-gradient-stop" type="button" aria-label="Quitar parada">−</button>
+                  <strong id="gradient-stop-count">2</strong>
+                  <button id="add-gradient-stop" type="button" aria-label="Agregar parada">+</button>
+                </div>
+              </div>
+              <div id="gradient-stop-list" class="gradient-stop-list" aria-label="Colores generados"></div>
+            </div>
+          </section>
+
+          <section class="result-card" aria-labelledby="result-title">
+            <div class="result-topline">
+              <div><p class="eyebrow">02 / Resultado</p><h3 id="result-title">Listo para pegar.</h3></div>
+              <span id="copy-state" class="copy-state" aria-live="polite">Vista previa</span>
+            </div>
+
+            <div id="discord-preview" class="discord-preview role-preview">
+              <span class="discord-dot"></span>
+              <span id="preview-text">『 𝓒𝓻𝓮𝓪𝓭𝓸𝓻 𝓭𝓮 𝓒𝓸𝓷𝓽𝓮𝓷𝓲𝓭𝓸 』</span>
+            </div>
+
+            <div class="copy-box">
+              <code id="output-text" aria-live="polite">『 𝓒𝓻𝓮𝓪𝓭𝓸𝓻 𝓭𝓮 𝓒𝓸𝓷𝓽𝓮𝓷𝓲𝓭𝓸 』</code>
+              <button id="copy-button" class="copy-button" type="button"><span aria-hidden="true">⧉</span> Copiar nombre</button>
+            </div>
+            <p id="result-note" class="result-note">Usa este nombre en Ajustes del servidor &gt; Roles.</p>
+
+            <div id="color-panel" class="color-panel">
+              <div class="section-label-row"><span class="field-label">Paleta recomendada</span><span id="palette-label">Creador</span></div>
+              <p id="palette-description">Violeta editorial para distinguir a quienes publican sin parecer staff.</p>
+              <div id="color-swatches" class="color-swatches" role="radiogroup" aria-label="Color de rol recomendado"></div>
+              <div class="chosen-color"><span id="chosen-color-dot"></span><code id="chosen-color">#C77DFF</code><span id="chosen-color-name">Violeta Creador</span></div>
+            </div>
+
+            <div id="gradient-output-panel" class="gradient-output-panel is-hidden">
+              <div class="section-label-row"><span class="field-label">Derivado desde un color</span><span id="gradient-style-label">Suave</span></div>
+              <p id="gradient-description">Elige un acabado y la herramienta calcula todos los tonos desde tu color base.</p>
+              <div id="gradient-code-stops" class="gradient-code-stops"></div>
+            </div>
+          </section>
+        </div>
+
+        <section class="presets-area" aria-labelledby="presets-title">
+          <div class="presets-heading">
+            <div><p class="eyebrow">03 / Atajos</p><h2 id="presets-title">Ejemplos inspirados en tu estructura.</h2></div>
+            <p>Son editables: tócales y luego cambia el texto base.</p>
+          </div>
+          <div id="preset-list" class="preset-list"></div>
+        </section>
+
+        <section class="guide-strip" aria-label="Guía rápida de roles">
+          <div><span class="guide-kicker">Regla que evita líos</span><strong>Visual = sin permisos.</strong><p>Usa los colores personalizados para identidad y reconocimiento. Los permisos deben vivir en roles funcionales claros.</p></div>
+          <div><span class="guide-kicker">Recuerda</span><strong>Miembro se acumula.</strong><p>Prueba las combinaciones reales de roles antes de cambiar accesos o canales privados.</p></div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <span>Discord Style Forge · Hecho para 『 Dubicrack Community 』</span>
+      <span>Sin conexión a Discord · Sin almacenamiento de datos</span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
