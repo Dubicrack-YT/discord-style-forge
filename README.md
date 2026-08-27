@@ -10,8 +10,8 @@ Generador local y estático para crear nombres con Unicode para **roles**, **sep
 - Paletas pensadas para roles de creador, miembro, verificación, edición, staff, identidad y edad.
 - Generador de degradados CSS basado en **un solo color**: inicia en dos paradas de sombra y brillo, permite añadir hasta siete tonos claros, medios y oscuros, e incluye estilos suave, metálico, cromado, oro/mineral, aurora y mate.
 - Los estilos de material usan una curva de varios puntos: **sombra lateral → tono medio → brillo central → tono medio → sombra lateral**. Por ello, al seleccionar un acabado metálico, cromado, oro, aurora o mate se proponen cinco paradas; Suave mantiene dos por defecto.
-- El acabado metálico predeterminado interpreta una progresión fría de cinco tonos: **cian vivo → azul hielo → blanco azulado → grafito → azul marino**. El selector de color base permite desplazar ese material a otra familia de color sin volverlo una rampa lineal.
-- Franja azul compacta de **tres muestras circulares** para elegir Oscuro, Equilibrado o Claro desde el mismo color base, inspirada en el formato visual de la referencia y no en un menú desplegable.
+- El acabado metálico predeterminado interpreta una progresión fría y moderada de cinco tonos: **cian vivo → azul hielo → brillo suave → pizarra → azul profundo**. El selector de color base permite desplazar ese material a otra familia de color sin volverlo una rampa lineal ni llevarlo a negro extremo.
+- Un selector de **Tema** aplica automáticamente la receta de cada material: Frío, Metálico, Cromado, Oro/mineral, Aurora o Mate. El usuario mantiene control sobre color base, dirección y número de paradas, sin un selector circular adicional.
 - Las bandas de salida se muestran como una franja de **círculos de color**, sin cápsulas de hexadecimal ni porcentajes, para que el resultado visual siga el mismo formato de selección.
 - Vista previa del **degradado aplicado al texto**, como una muestra de nombre de rol mejorado; los acabados oscuros se muestran sin borde ni contorno.
 - Presets inspirados en 『 Dubicrack Community 』 sin conexión a la API de Discord.

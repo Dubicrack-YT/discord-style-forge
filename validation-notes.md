@@ -38,3 +38,13 @@ La versión siguiente elimina las cápsulas rectangulares que mostraban hexadeci
 ## Reinterpretación tonal de referencia
 
 La referencia no describe cinco aclarados del mismo color. Su lectura visual es asimétrica: primer tono cian saturado, segundo azul hielo, tercero blanco con matiz frío, cuarto grafito casi negro y quinto azul marino. El modo Metálico ahora usa esa relación como su receta por defecto y abre con el color base cian `#16B8E9`; el selector sigue permitiendo una sola entrada de color para derivar variaciones.
+
+La comprobación de la página publicada confirmó la salida del modo Metálico equilibrado: `#16B8E9` → `#8ED6EC` → `#E4EEF1` → `#14181A` → `#132971`. La pantalla muestra la progresión mediante cinco círculos dentro de una franja azul y ya no mediante cápsulas con hexadecimales ni porcentajes.
+
+## Suavizado de contraste
+
+La siguiente revisión reduce el contraste excesivo de la receta fría. Conserva cian, hielo y cierre azul, pero sustituye el blanco intenso, grafito casi negro y marino muy oscuro por un brillo frío suave, pizarra media y azul profundo moderado.
+
+## Simplificación por tema
+
+La siguiente revisión elimina el selector circular de tonos. La configuración del degradado queda reducida a Tema, color base, dirección y cantidad de paradas. Cada tema aporta su propia receta de tonos sin obligar a elegir un nivel extra de luminosidad.

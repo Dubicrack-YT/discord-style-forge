@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="es-MX">
-  <!-- Archivo Gótico Modular: los degradados se presentan como muestras editoriales, no como decoración del control. -->
+  <!-- Archivo Gótico Modular: controles mínimos para temas de material; la personalización vive en color base, dirección y paradas. -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23101115'/%3E%3Cpath d='M18 14h15c13 0 18 7 18 18s-5 18-18 18H18z' fill='none' stroke='%235BCE96' stroke-width='6'/%3E%3Cpath d='M25 23h9c5 0 8 3 8 9s-3 9-8 9h-9z' fill='%235BCE96'/%3E%3C/svg%3E" />
     <title>Discord Style Forge</title>
-    <link rel="stylesheet" href="style.css?v=tones3" />
+    <link rel="stylesheet" href="style.css?v=themes8" />
   </head>
   <body>
     <div class="noise" aria-hidden="true"></div>
@@ -132,9 +132,9 @@
               </div>
 
               <div class="select-field gradient-select-field">
-                <label class="field-label" for="gradient-style">Acabado</label>
+                <label class="field-label" for="gradient-style">Tema</label>
                 <select id="gradient-style">
-                  <option value="soft">Suave</option>
+                  <option value="soft">Frío</option>
                   <option value="metal">Metálico</option>
                   <option value="chrome">Cromado</option>
                   <option value="gold">Oro / mineral</option>
@@ -151,13 +151,6 @@
                   <option value="0deg">Horizontal</option>
                   <option value="45deg">Diagonal inversa</option>
                 </select>
-              </div>
-
-              <div class="tone-picker" aria-labelledby="gradient-tone-title">
-                <div class="tone-picker-heading">
-                  <div><span id="gradient-tone-title" class="field-label">Elige un color</span><small id="gradient-lightness-note">Oscuro, equilibrado o claro desde tu mismo color base.</small></div>
-                </div>
-                <div id="gradient-tone-swatches" class="tone-swatch-rail" role="radiogroup" aria-label="Tono del degradado"></div>
               </div>
 
               <div class="stops-control">
@@ -229,6 +222,6 @@
       <span>Sin conexión a Discord · Sin almacenamiento de datos</span>
     </footer>
 
-    <script src="app.js?v=tones3"></script>
+    <script src="app.js?v=themes8"></script>
   </body>
 </html>
