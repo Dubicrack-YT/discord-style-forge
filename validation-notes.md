@@ -26,3 +26,15 @@ La publicación final se verificó en GitHub Pages: Metálico abre con cinco ban
 La siguiente revisión sustituye las cinco muestras de luminosidad por tres muestras: Oscuro, Equilibrado y Claro. El control se compacta en una sola franja azul con círculos, aro blanco y un símbolo visual de cuentagotas, siguiendo la composición de la referencia. Los tres tonos se derivan del color base, pero el fondo azul de la franja se mantiene estable para que el control tenga una identidad visual clara.
 
 La comprobación local confirmó que el control muestra exactamente tres muestras y que Oscuro actualiza la salida usando el color base y una sombra más profunda, manteniendo la barra azul compacta y la vista de texto sin contorno.
+
+GitHub Pages confirmó el despliegue de la revisión del selector simplificado el 27 de agosto de 2026 a las 22:08. La fuente de publicación sigue siendo la rama `main` y la carpeta raíz.
+
+La comprobación visual de la publicación confirmó que el generador muestra la barra azul compacta con tres círculos de selección y sus símbolos claros. El orden visible es Oscuro, Equilibrado y Claro, sin la paleta anterior de cinco niveles.
+
+## Corrección de la salida de colores
+
+La versión siguiente elimina las cápsulas rectangulares que mostraban hexadecimal y porcentaje para cada banda. En ambos lugares de salida, los colores generados se representan ahora como círculos con aro blanco dentro de una franja azul compacta, sin exponer texto de valores junto a cada muestra.
+
+## Reinterpretación tonal de referencia
+
+La referencia no describe cinco aclarados del mismo color. Su lectura visual es asimétrica: primer tono cian saturado, segundo azul hielo, tercero blanco con matiz frío, cuarto grafito casi negro y quinto azul marino. El modo Metálico ahora usa esa relación como su receta por defecto y abre con el color base cian `#16B8E9`; el selector sigue permitiendo una sola entrada de color para derivar variaciones.

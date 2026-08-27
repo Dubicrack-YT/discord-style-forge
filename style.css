@@ -117,11 +117,11 @@ input:focus, select:focus { border-color: var(--vitriol); box-shadow: 0 0 0 3px 
 .stop-stepper button { color: var(--vitriol); font-size: 17px; transition: background 160ms var(--ease-out), transform 160ms var(--ease-out); }
 .stop-stepper button:hover { background: rgba(91, 206, 150, .12); }
 .stop-stepper strong { border-right: 1px solid var(--line); border-left: 1px solid var(--line); font-size: 11px; }
-.gradient-stop-list, .gradient-code-stops { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 13px; }
-.gradient-stop { display: inline-flex; gap: 5px; align-items: center; padding: 5px 6px; color: var(--muted); border: 1px solid var(--line); border-radius: 5px 2px 5px 2px; background: #101217; font-size: 9px; }
-.gradient-stop i { width: 12px; height: 12px; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; }
-.gradient-stop code { color: var(--paper); font-size: 9px; font-weight: 800; }
-.gradient-stop small { color: var(--muted); font-size: 8px; }
+.gradient-stop-list, .gradient-code-stops { margin-top: 13px; }
+.generated-color-rail { min-height: 51px; display: flex; align-items: center; gap: 12px; padding: 7px 10px; border: 1px solid rgba(119, 205, 250, .48); border-radius: 4px; background: linear-gradient(96deg, #00a5dc 0%, #087bc4 56%, #173b88 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 8px 22px rgba(0,0,0,.18); }
+.generated-color-dot { position: relative; display: grid; width: 35px; height: 35px; place-items: center; flex: 0 0 auto; border: 1px solid rgba(255,255,255,.78); border-radius: 50%; background: var(--generated-stop); box-shadow: inset 0 0 0 1px rgba(8,10,16,.12); }
+.generated-color-dot::before { width: 13px; height: 5px; content: ""; border: 1.5px solid rgba(255,255,255,.96); border-radius: 3px; transform: rotate(-45deg); box-shadow: 4px 4px 0 -2px rgba(255,255,255,.96); }
+.generated-color-dot::after { position: absolute; right: 10px; bottom: 9px; width: 3px; height: 3px; content: ""; border-radius: 50%; background: rgba(255,255,255,.96); }
 
 .result-topline { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
 .result-topline h3 { margin: 8px 0 0; font-size: 18px; }
