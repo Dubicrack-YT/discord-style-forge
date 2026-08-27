@@ -9,8 +9,8 @@ Generador local y estático para crear nombres con Unicode para **roles**, **sep
 - Emojis sugeridos para canales de información, reglas, anuncios, verificación, soporte, multimedia, economía y staff.
 - Paletas pensadas para roles de creador, miembro, verificación, edición, staff, identidad y edad.
 - Generador de degradados CSS basado en **un solo color**: inicia en dos paradas de sombra y brillo, permite añadir hasta siete tonos claros, medios y oscuros, e incluye estilos suave, metálico, cromado, oro/mineral, aurora y mate.
-- Selector de luminosidad **claro, equilibrado u oscuro** para que el mismo acabado pueda ir de un brillo blanco a un metal ennegrecido.
-- Vista previa del **degradado aplicado al texto**, como una muestra de nombre de rol mejorado, sin colocar texto encima de un cuadro con degradado.
+- Franja visual de **cinco tonos circulares** para elegir Brillo, Claro, Equilibrado, Oscuro o Negro desde el mismo color base, inspirada en una paleta de muestras y no en un menú desplegable.
+- Vista previa del **degradado aplicado al texto**, como una muestra de nombre de rol mejorado; los acabados oscuros se muestran sin borde ni contorno.
 - Presets inspirados en 『 Dubicrack Community 』 sin conexión a la API de Discord.
 - Todo se procesa en el navegador; no se solicita inicio de sesión ni se guardan textos.
 
