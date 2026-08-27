@@ -153,6 +153,16 @@
                 </select>
               </div>
 
+              <div class="select-field gradient-select-field">
+                <label class="field-label" for="gradient-lightness">Luminosidad</label>
+                <select id="gradient-lightness">
+                  <option value="light">Claro · más brillo</option>
+                  <option value="balanced">Equilibrado · recomendado</option>
+                  <option value="dark">Oscuro · metal ennegrecido</option>
+                </select>
+                <small id="gradient-lightness-note" class="select-note">Mantiene las mismas bandas, con un acabado de luz equilibrada.</small>
+              </div>
+
               <div class="stops-control">
                 <div><span class="field-label">Paradas de color</span><small id="gradient-stops-help">Por defecto: 2 colores derivados.</small></div>
                 <div class="stop-stepper" aria-label="Cantidad de paradas del degradado">
@@ -175,9 +185,9 @@
               <span class="discord-dot"></span>
               <span id="preview-text">『 𝓒𝓻𝓮𝓪𝓭𝓸𝓻 𝓭𝓮 𝓒𝓸𝓷𝓽𝓮𝓷𝓲𝓭𝓸 』</span>
               <div id="gradient-example-copy" class="gradient-example-copy is-hidden" aria-live="polite">
-                <span>Ejemplo de título</span>
-                <strong>Tu comunidad.<br />Tu estilo.</strong>
-                <small>Contraste calculado para el acabado</small>
+                <span>Preview de rol con degradado</span>
+                <strong>『 Tu comunidad. Tu estilo. 』</strong>
+                <small id="gradient-example-note">El color vive dentro del texto.</small>
               </div>
             </div>
 

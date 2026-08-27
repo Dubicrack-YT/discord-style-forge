@@ -127,12 +127,12 @@ input:focus, select:focus { border-color: var(--vitriol); box-shadow: 0 0 0 3px 
 .divider-preview { justify-content: center; color: #d7d9df; background: #272a31; }
 .divider-preview .discord-dot { display: none; }
 .category-preview { color: #c8ccd5; text-transform: uppercase; background: #20232a; font-size: 14px; letter-spacing: .08em; }
-.gradient-preview { justify-content: center; min-height: 174px; color: var(--gradient-text, rgba(255,255,255,.94)); border-color: rgba(255,255,255,.25); background: var(--generated-gradient); box-shadow: inset 0 0 0 1px rgba(10,10,12,.25); font-family: "Unbounded", sans-serif; font-size: clamp(13px, 1.7vw, 19px); text-align: center; text-shadow: var(--gradient-shadow, 0 1px 12px rgba(0,0,0,.45)); }
+.gradient-preview { justify-content: center; min-height: 174px; color: rgba(244,242,235,.96); border-color: rgba(255,255,255,.18); background: linear-gradient(145deg, #262a32, #0e1015 72%); box-shadow: inset 0 0 0 1px rgba(255,255,255,.04), inset 0 20px 38px rgba(255,255,255,.025); font-family: "Unbounded", sans-serif; font-size: clamp(13px, 1.7vw, 19px); text-align: center; }
 .gradient-preview .discord-dot { display: none; }
-.gradient-preview #preview-text { position: absolute; top: 13px; left: 15px; padding: 5px 7px; color: var(--gradient-text, #fff); border: 1px solid var(--gradient-border, rgba(255,255,255,.3)); border-radius: 5px 2px 5px 2px; background: var(--gradient-plate, rgba(8,10,14,.36)); font-family: "Manrope", sans-serif; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-shadow: none; text-transform: uppercase; }
-.gradient-example-copy { position: relative; z-index: 1; display: grid; justify-items: center; gap: 7px; padding: 18px 24px; color: var(--gradient-text, #fff); border: 1px solid var(--gradient-border, rgba(255,255,255,.3)); border-radius: 9px 3px 9px 3px; background: var(--gradient-plate, rgba(8,10,14,.36)); box-shadow: 0 12px 28px rgba(4,5,7,.18); }
+.gradient-preview #preview-text { position: absolute; top: 13px; left: 15px; padding: 5px 7px; color: var(--paper); border: 1px solid rgba(255,255,255,.14); border-radius: 5px 2px 5px 2px; background: rgba(8,10,14,.46); font-family: "Manrope", sans-serif; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-shadow: none; text-transform: uppercase; }
+.gradient-example-copy { position: relative; z-index: 1; display: grid; justify-items: center; gap: 8px; padding: 15px 10px; color: var(--paper); background: transparent; }
 .gradient-example-copy span { font-family: "Manrope", sans-serif; font-size: 9px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
-.gradient-example-copy strong { font-size: clamp(17px, 2vw, 25px); letter-spacing: -.07em; line-height: 1.05; }
+.gradient-example-copy strong { display: inline-block; max-width: 100%; padding: 3px; color: transparent; background: var(--generated-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; -webkit-text-stroke: 1px var(--gradient-text-stroke, rgba(255,255,255,.12)); filter: drop-shadow(0 3px 8px rgba(0,0,0,.52)); font-size: clamp(17px, 2vw, 25px); letter-spacing: -.07em; line-height: 1.12; }
 .gradient-example-copy small { font-family: "Manrope", sans-serif; font-size: 9px; font-weight: 700; opacity: .82; }
 .copy-box { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 9px; margin-top: 12px; }
 .copy-box code { min-width: 0; padding: 11px 12px; overflow: hidden; color: #d5d7de; text-overflow: ellipsis; white-space: nowrap; border: 1px solid var(--line); border-radius: 6px 3px 6px 3px; background: rgba(5, 6, 8, .36); font-size: 12px; }
@@ -151,6 +151,7 @@ input:focus, select:focus { border-color: var(--vitriol); box-shadow: 0 0 0 3px 
 .gradient-output-panel { position: relative; z-index: 1; margin-top: 29px; padding-top: 21px; border-top: 1px solid var(--line); }
 .gradient-output-panel p { margin: 7px 0 0; color: var(--muted); font-size: 11px; line-height: 1.55; }
 .gradient-output-panel .gradient-code-stops { margin-top: 13px; }
+.select-note { display: block; margin-top: 7px; color: var(--muted); font-size: 10px; font-weight: 700; line-height: 1.45; }
 
 .presets-area { margin-top: 52px; padding-top: 32px; border-top: 1px solid var(--line); }
 .presets-heading { display: flex; justify-content: space-between; gap: 26px; align-items: end; }
