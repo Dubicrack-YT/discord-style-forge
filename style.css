@@ -104,12 +104,12 @@ input:focus, select:focus { border-color: var(--vitriol); box-shadow: 0 0 0 3px 
 .tone-picker { margin-top: 20px; }
 .tone-picker-heading { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
 .tone-picker-heading > div small { display: block; max-width: 235px; margin-top: 5px; color: var(--muted); font-size: 10px; font-weight: 700; line-height: 1.45; }
-.tone-picker-heading > strong { padding-top: 1px; color: var(--vitriol); font-family: "Unbounded", sans-serif; font-size: 9px; letter-spacing: .03em; text-align: right; }
-.tone-swatch-rail { display: flex; gap: 9px; align-items: center; min-height: 54px; margin-top: 10px; padding: 8px 10px; border: 1px solid rgba(129, 207, 255, .36); border-radius: 5px 3px 5px 3px; background: linear-gradient(96deg, var(--tone-rail-start, #087eb8), var(--tone-rail-end, #203f91)); box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 8px 22px rgba(0,0,0,.18); }
-.tone-swatch { position: relative; width: 33px; height: 33px; display: grid; place-items: center; flex: 0 0 auto; color: rgba(255,255,255,.92); border: 1px solid rgba(255,255,255,.62); border-radius: 50%; background: var(--tone-color); box-shadow: inset 0 0 0 1px rgba(8,10,16,.1); transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out), border-color 160ms var(--ease-out); }
-.tone-swatch::after { content: "✦"; font-size: 11px; filter: drop-shadow(0 1px 2px rgba(0,0,0,.45)); }
+.tone-swatch-rail { display: flex; gap: 12px; align-items: center; min-height: 51px; margin-top: 10px; padding: 7px 10px; border: 1px solid rgba(119, 205, 250, .48); border-radius: 4px; background: linear-gradient(96deg, #00a5dc 0%, #087bc4 56%, #173b88 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.22), 0 8px 22px rgba(0,0,0,.18); }
+.tone-swatch { position: relative; width: 35px; height: 35px; display: grid; place-items: center; flex: 0 0 auto; color: rgba(255,255,255,.92); border: 1px solid rgba(255,255,255,.78); border-radius: 50%; background: var(--tone-color); box-shadow: inset 0 0 0 1px rgba(8,10,16,.12); transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out), border-color 160ms var(--ease-out); }
+.tone-swatch::before { width: 13px; height: 5px; content: ""; border: 1.5px solid rgba(255,255,255,.96); border-radius: 3px; transform: rotate(-45deg); box-shadow: 4px 4px 0 -2px rgba(255,255,255,.96); }
+.tone-swatch::after { position: absolute; width: 3px; height: 3px; content: ""; right: 10px; bottom: 9px; border-radius: 50%; background: rgba(255,255,255,.96); }
 .tone-swatch:hover { transform: translateY(-2px) scale(1.04); }
-.tone-swatch.is-selected { border-color: #fff; outline: 2px solid rgba(255,255,255,.96); outline-offset: 3px; box-shadow: inset 0 0 0 1px rgba(8,10,16,.26), 0 0 0 4px rgba(230,248,255,.3); }
+.tone-swatch.is-selected { border-color: #fff; outline: 2px solid rgba(255,255,255,.96); outline-offset: 3px; box-shadow: inset 0 0 0 1px rgba(8,10,16,.26), 0 0 0 4px rgba(230,248,255,.25); }
 .stops-control { display: flex; justify-content: space-between; gap: 14px; align-items: center; margin-top: 24px; }
 .stops-control small { display: block; max-width: 190px; margin-top: 5px; color: var(--muted); font-size: 10px; line-height: 1.45; }
 .stop-stepper { display: flex; overflow: hidden; border: 1px solid var(--line-strong); border-radius: 7px 3px 7px 3px; background: #0e1014; }
